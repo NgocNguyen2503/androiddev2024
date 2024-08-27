@@ -12,5 +12,5 @@ Student Info
 
 * Name: Nguyen Quang Ngoc
 * ID: BA12-139
-* Group ID: *Your Group ID here*
+* Group ID: 18
 * Project Name: *Your Project Name here*
