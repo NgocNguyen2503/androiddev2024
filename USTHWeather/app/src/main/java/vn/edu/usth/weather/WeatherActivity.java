@@ -23,7 +23,7 @@ public class WeatherActivity extends AppCompatActivity {
         });
         ForecastFragment firstFragment = new ForecastFragment();
         getSupportFragmentManager().beginTransaction().add(
-                R.id.container, firstFragment).commit();
+                R.id.main, firstFragment).commit();
     }
 
     @Override
