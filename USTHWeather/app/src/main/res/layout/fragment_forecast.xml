@@ -17,7 +17,6 @@
         android:orientation="vertical"
         android:id="@+id/weather_container"
         android:layout_marginLeft="65px"
-        android:layout_marginTop="500px"
         android:background="#e6e6fa">
 
         <LinearLayout
@@ -136,7 +135,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/item4"
+            android:id="@+id/item5"
             android:layout_width="950px"
             android:layout_height="150px"
             android:orientation="horizontal"
@@ -165,7 +164,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/item4"
+            android:id="@+id/item6"
             android:layout_width="950px"
             android:layout_height="150px"
             android:orientation="horizontal"
@@ -194,7 +193,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/item4"
+            android:id="@+id/item7"
             android:layout_width="950px"
             android:layout_height="150px"
             android:orientation="horizontal"
