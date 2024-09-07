@@ -10,7 +10,7 @@
         android:layout_width="950px"
         android:layout_height="600px"
         android:background="#DBFBDB"
-        android:layout_centerInParent="true"
+
         android:layout_marginLeft="65px">
         <TextView
             android:layout_marginLeft="50px"

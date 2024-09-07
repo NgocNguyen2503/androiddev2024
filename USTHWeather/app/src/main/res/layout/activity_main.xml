@@ -9,22 +9,30 @@
     android:background="#20FF0000"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id= "@+id/weatherFragment"
-            android:name="vn.edu.usth.weather.WeatherFragment" />
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
+<!--        <fragment-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id= "@+id/weatherFragment"-->
+<!--            android:name="vn.edu.usth.weather.WeatherFragment" />-->
 
-        <fragment
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/forecast"
-            android:name="vn.edu.usth.weather.ForecastFragment" />
-    </LinearLayout>
+<!--        <fragment-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/forecast"-->
+<!--            android:name="vn.edu.usth.weather.ForecastFragment" />-->
+<!--    </LinearLayout>-->
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
 
         
 
