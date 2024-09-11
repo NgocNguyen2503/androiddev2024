@@ -32,10 +32,14 @@ public class WeatherActivity extends AppCompatActivity {
 //        ForecastFragment firstFragment = new ForecastFragment();
 //        getSupportFragmentManager().beginTransaction().add(
 //                R.id.main, firstFragment).commit();
-        PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
+        PagerAdapter adapter = new HomePagerAdapter(getSupportFragmentManager());
         ViewPager pager = findViewById(R.id.pager);
+
         pager.setOffscreenPageLimit(3);
         pager.setAdapter(adapter);
+
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
+        tabLayout.setupWithViewPager(pager);
 
 
 
@@ -70,34 +74,29 @@ public class WeatherActivity extends AppCompatActivity {
         super.onDestroy();
         Log.i("weather", "Destroy");
     }
-    public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
+    public class HomePagerAdapter extends FragmentPagerAdapter {
         private final int PAGE_COUNT = 3;
-        private final String[] titles = new String[]{"Hanoi", "Paris", "Toulouse"};
+        private final String[] titles = new String[]{"First", "Second", "Third"};
 
-        public HomeFragmentPagerAdapter(FragmentManager fm) {
+        public HomePagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public int getCount() {
-            return PAGE_COUNT;          // number of pages for a ViewPager
-//            return (titles.length);   // number of pages for a ViewPager
+            return PAGE_COUNT;
         }
 
         @NonNull
         @Override
-        public Fragment getItem(int page){
-            // returns an instance of Fragment corresponding to the specified page
+        public Fragment getItem(int page) {
             return new WeatherAndForecastFragment();
         }
-
-        @Override
         public CharSequence getPageTitle(int page) {
             // returns a tab title corresponding to the specified page
             return titles[page];
         }
     }
-
 
 
 
