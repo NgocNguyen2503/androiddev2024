@@ -12,5 +12,5 @@ Student Info
 
 * Name: Nguyen Quang Ngoc
 * ID: BA12-139
-* Group ID: 18
-* Project Name: *Your Project Name here*
+* Group ID: 15
+* Project Name: News Reader
