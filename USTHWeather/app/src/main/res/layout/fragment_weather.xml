@@ -7,11 +7,11 @@
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
-        android:layout_width="950px"
+        android:layout_width="@dimen/width_fragment"
         android:layout_height="600px"
-        android:background="#DBFBDB"
+        android:background="@color/weather_color"
 
-        android:layout_marginLeft="65px">
+        android:layout_marginLeft="@dimen/framgent_marginLeft">
         <TextView
             android:layout_marginLeft="50px"
             android:layout_width="250px"

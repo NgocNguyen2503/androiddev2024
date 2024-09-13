@@ -12,215 +12,313 @@
 <!--        android:layout_height="match_parent"-->
 <!--        android:text="something" />-->
     <LinearLayout
-        android:layout_width="950px"
+        android:layout_width="@dimen/width_fragment"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:id="@+id/weather_container"
-        android:layout_marginLeft="65px"
-        android:background="#e6e6fa">
+        android:layout_marginLeft="@dimen/framgent_marginLeft"
+        android:background="@color/forecast_color">
 
         <LinearLayout
             android:id="@+id/item1"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
+            android:padding="@dimen/weather_forecast_item_padding">
 
             <TextView
-                android:layout_width="180px"
+                android:layout_width="@dimen/day_width"
                 android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="MON"
+                android:text="@string/Monday"
                 android:gravity="center"/>
 
             <View
-                android:layout_width="150px"
+                android:layout_width="@dimen/image_width"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/clouds" />
-            <TextView
-                android:layout_width="109dp"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/clouds"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/cloudy"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="24 - 28 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:id="@+id/item2"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
+            android:padding="@dimen/weather_forecast_item_padding">
+
             <TextView
-                android:layout_width="180px"
+                android:layout_width="@dimen/day_width"
                 android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="TUE"
+                android:text="@string/Tuesday"
                 android:gravity="center"/>
+
             <View
-                android:layout_width="150px"
+                android:layout_width="@dimen/image_width"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/clear" />
-            <TextView
-                android:layout_width="109dp"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/clear"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/clear"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="25 - 30 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:id="@+id/item3"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
+            android:padding="@dimen/weather_forecast_item_padding">
+
             <TextView
-                android:layout_width="180px"
+                android:layout_width="@dimen/day_width"
                 android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="WED"
+                android:text="@string/Wednesday"
                 android:gravity="center"/>
+
             <View
-                android:layout_width="150px"
+                android:layout_width="@dimen/image_width"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/drizzle" />
-            <TextView
-                android:layout_width="109dp"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/mist"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/mist"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="20 - 27 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
         </LinearLayout>
         <LinearLayout
             android:id="@+id/item4"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
-            <TextView
-                android:layout_width="180px"
-                android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="THU"
-                android:gravity="center"/>
-            <View
-                android:layout_width="150px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/clear" />
-            <TextView
-                android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
+            android:padding="@dimen/weather_forecast_item_padding">
 
+            <TextView
+                android:layout_width="@dimen/day_width"
+                android:layout_height="match_parent"
+                android:text="@string/Thursday"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="@dimen/image_width"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/rain"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/rain"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="20 - 23 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/item5"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
-            <TextView
-                android:layout_width="180px"
-                android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="FRI"
-                android:gravity="center"/>
-            <View
-                android:layout_width="150px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/clear" />
-            <TextView
-                android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
+            android:padding="@dimen/weather_forecast_item_padding">
 
+            <TextView
+                android:layout_width="@dimen/day_width"
+                android:layout_height="match_parent"
+                android:text="@string/Friday"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="@dimen/image_width"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/drizzle"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/drizzle"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="18 - 22 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/item6"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
-            <TextView
-                android:layout_width="180px"
-                android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="SAT"
-                android:gravity="center"/>
-            <View
-                android:layout_width="150px"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/clear" />
-            <TextView
-                android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
-        </LinearLayout>
+            android:padding="@dimen/weather_forecast_item_padding">
 
+            <TextView
+                android:layout_width="@dimen/day_width"
+                android:layout_height="match_parent"
+                android:text="@string/Saturday"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="@dimen/image_width"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/clouds"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/cloudy"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="25 - 28 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/item7"
-            android:layout_width="950px"
-            android:layout_height="150px"
+            android:layout_width="@dimen/weather_forecast_item_width"
+            android:layout_height="@dimen/weather_forecast_item_height"
             android:orientation="horizontal"
-            android:padding="4px">
+            android:padding="@dimen/weather_forecast_item_padding">
+
             <TextView
-                android:layout_width="180px"
+                android:layout_width="@dimen/day_width"
                 android:layout_height="match_parent"
-                android:paddingLeft="8px"
-                android:paddingRight="8px"
-                android:text="SUN"
+                android:text="@string/Sunday"
                 android:gravity="center"/>
+
             <View
-                android:layout_width="150px"
+                android:layout_width="@dimen/image_width"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="8px"
-                android:layout_marginRight="8px"
-                android:background="@drawable/clear" />
-            <TextView
-                android:layout_width="109dp"
+                android:layout_marginRight="@dimen/image_marginRight"
+                android:background="@drawable/clear"
+                android:layout_gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:paddingLeft="16px"
-                android:paddingRight="16px"
-                android:text="Cloudy\n24 - 28 C"
-                android:gravity="center_vertical"/>
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/weather_text_paddingLeft">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+
+                    android:text="@string/clear"
+                    android:gravity="center_vertical"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="27 - 32 C"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

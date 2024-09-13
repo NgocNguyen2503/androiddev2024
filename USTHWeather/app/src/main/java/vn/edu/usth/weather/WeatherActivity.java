@@ -90,7 +90,10 @@ public class WeatherActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment getItem(int page) {
-            return new WeatherAndForecastFragment();
+
+                    return new WeatherAndForecastFragment();
+
+            //return new WeatherAndForecastFragment();
         }
         public CharSequence getPageTitle(int page) {
             // returns a tab title corresponding to the specified page

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="width_fragment">950px</dimen>
+    <dimen name="framgent_marginLeft">65px</dimen>
+    <dimen name="weather_forecast_item_height">170px</dimen>
+    <dimen name="weather_forecast_item_width">950px</dimen>
+    <dimen name="weather_forecast_item_padding">4px</dimen>
+    <dimen name="day_width">180px</dimen>
+    <dimen name="day_padding">180px</dimen>
+    <dimen name="image_width">150px</dimen>
+    <dimen name="image_marginRight">10dp</dimen>
+    <dimen name="weather_text_paddingLeft">16px</dimen>
+
+
+</resources>
