@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Tuesday">Thứ ba</string>
+    <string name="Monday">Thứ hai</string>
+    <string name="Wednesday">Thứ tư</string>
+    <string name="Thursday">Thứ năm</string>
+    <string name="Friday">Thứ sáu</string>
+    <string name="Saturday">Thứ bảy</string>
+    <string name="Sunday">Chủ nhật</string>
+    <string name="cloudy">Nhiều mây</string>
+    <string name="clear">Nắng</string>
+    <string name="drizzle">Mưa phùn</string>
+    <string name="mist">Sương mù</string>
+    <string name="rain">Mưa</string>
+    <string name="humidity">Ẩm</string>
+</resources>
