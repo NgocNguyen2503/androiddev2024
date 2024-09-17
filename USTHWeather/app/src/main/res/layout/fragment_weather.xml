@@ -9,13 +9,21 @@
     <RelativeLayout
         android:layout_width="@dimen/width_fragment"
         android:layout_height="600px"
-        android:background="@color/weather_color"
+        android:background="#ffffff"
 
         android:layout_marginLeft="@dimen/framgent_marginLeft">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/frame"/>
         <TextView
-            android:layout_marginLeft="50px"
+            android:layout_marginTop="50px"
+            android:layout_marginLeft="100px"
             android:layout_width="250px"
             android:layout_height="150px"
+
             android:layout_alignParentLeft="true"
             android:text="12 C\nCloudy "
             android:gravity="center_vertical">
@@ -24,6 +32,8 @@
         <TextView
             android:layout_width="150px"
             android:layout_height="150px"
+            android:layout_marginTop="50px"
+            android:layout_marginRight="50px"
             android:gravity="center_vertical"
             android:layout_alignParentRight="true"
             android:text="Hanoi">
@@ -33,7 +43,7 @@
             android:layout_centerInParent="true"
             android:layout_width="600px"
             android:layout_height="300px"
-            android:src="@drawable/clear"></ImageView>
+            android:src="@drawable/clouds"></ImageView>
 
 
 

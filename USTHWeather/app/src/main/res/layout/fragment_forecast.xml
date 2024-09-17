@@ -17,7 +17,7 @@
         android:orientation="vertical"
         android:id="@+id/weather_container"
         android:layout_marginLeft="@dimen/framgent_marginLeft"
-        android:background="@color/forecast_color">
+        android:background="#ffffff">
 
         <LinearLayout
             android:id="@+id/item1"
