@@ -1,10 +1,13 @@
 package vn.edu.usth.weather;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
@@ -63,7 +66,12 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int itemId = item.getItemId();
-        if (itemId == R.id.search) {
+        if (itemId == R.id.refresh) {
+            Toast.makeText(this, "refreshing", Toast.LENGTH_SHORT).show();
+            return true;
+        } else if (itemId == R.id.setting) {
+            Intent intent = new Intent(WeatherActivity.this, PrefActivity.class);
+            startActivity(intent);
             return true;
         }
 
