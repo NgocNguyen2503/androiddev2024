@@ -3,6 +3,9 @@ package vn.edu.usth.weather;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -43,11 +46,31 @@ public class WeatherActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(pager);
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.audio1);
+//        mediaPlayer = MediaPlayer.create(this, R.raw.audio1);
+//
+//        mediaPlayer.start();
+        Toolbar Toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(Toolbar);
 
-        mediaPlayer.start();
+
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int itemId = item.getItemId();
+        if (itemId == R.id.search) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
+
 
     @Override
     protected void onStart() {
