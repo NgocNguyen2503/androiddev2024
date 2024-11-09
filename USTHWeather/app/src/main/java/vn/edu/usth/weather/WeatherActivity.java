@@ -2,10 +2,8 @@ package vn.edu.usth.weather;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,9 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -71,7 +66,7 @@ public class WeatherActivity extends AppCompatActivity {
         int itemId = item.getItemId();
         if (itemId == R.id.refresh) {
             //Toast.makeText(this, "refreshing", Toast.LENGTH_SHORT).show();
-            simulate();
+            new simulate().execute();
             return true;
         } else if (itemId == R.id.setting) {
             Intent intent = new Intent(WeatherActivity.this, PrefActivity.class);
@@ -117,6 +112,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
         Log.i("weather", "Destroy");
     }
+    // Prac 14
     public class HomePagerAdapter extends FragmentPagerAdapter {
         private final int PAGE_COUNT = 3;
         private final String[] titles = new String[]{"First", "Second", "Third"};
@@ -144,41 +140,69 @@ public class WeatherActivity extends AppCompatActivity {
         }
     }
 
+    private class simulate extends AsyncTask<Void, Void, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            Log.i("AsyncTask", "Requesting");
+        }
 
-    private void simulate() {
-        final Handler handler = new Handler(Looper.getMainLooper()) {
-            @Override
-            public void handleMessage(Message msg) {
-                // This method is executed in the main thread
-                String content = msg.getData().getString("server_response");
-                Log.d("weather", "Server response: " + content);
-                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+        @Override
+        protected String doInBackground(Void... voids) {
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        };
+            return "some sample json here";
+        }
 
-        Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                try {
-                    Thread.sleep(2000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                // Assume that we got our data from the server
-                Bundle bundle = new Bundle();
-                bundle.putString("server_response", "some sample json here");
-
-                // Notify the main thread
-                Message msg = new Message();
-                msg.setData(bundle);
-                handler.sendMessage(msg);
-            }
-        });
-        t.start();
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Toast.makeText(WeatherActivity.this, result, Toast.LENGTH_SHORT).show();
+        }
     }
+
+
+
+
+//    Prac 13
+//    private void simulate() {
+//        final Handler handler = new Handler(Looper.getMainLooper()) {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                // This method is executed in the main thread
+//                String content = msg.getData().getString("server_response");
+//
+//                Toast.makeText(WeatherActivity.this, content, Toast.LENGTH_SHORT).show();
+//            }
+//        };
+//
+//        Toast.makeText(this, "Loading...", Toast.LENGTH_SHORT).show();
+//        Thread t = new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//
+//                try {
+//                    Thread.sleep(2000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//
+//                // Assume that we got our data from the server
+//                Bundle bundle = new Bundle();
+//                bundle.putString("server_response", "some sample json here");
+//
+//                // Notify the main thread
+//                Message msg = new Message();
+//                msg.setData(bundle);
+//                handler.sendMessage(msg);
+//            }
+//        });
+//        t.start();
+//    }
+
 
 
 
