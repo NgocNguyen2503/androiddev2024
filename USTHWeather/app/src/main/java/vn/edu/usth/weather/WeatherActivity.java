@@ -114,7 +114,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
         Log.i("weather", "Destroy");
     }
-    // Prac 14
+
     public class HomePagerAdapter extends FragmentPagerAdapter {
         private final int PAGE_COUNT = 3;
         private final String[] titles = new String[]{"First", "Second", "Third"};
@@ -141,7 +141,7 @@ public class WeatherActivity extends AppCompatActivity {
             return titles[page];
         }
     }
-
+    //Prac 14
     private class simulate extends AsyncTask<Void, Void, String> {
         @Override
         protected void onPreExecute() {
