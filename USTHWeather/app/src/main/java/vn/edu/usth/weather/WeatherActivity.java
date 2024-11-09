@@ -25,6 +25,8 @@ import com.google.android.material.tabs.TabLayout;
 public class WeatherActivity extends AppCompatActivity {
 
     MediaPlayer mediaPlayer;
+    private static final String USTH_LOGO_URL = "https://www.usth.edu.vn/uploads/logo_usth_white.png";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
